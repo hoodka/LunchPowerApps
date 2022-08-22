@@ -1,0 +1,36 @@
+{
+  "Name": "ViewShapeInMR",
+  "PcfConversions": [
+    {
+      "Action": [
+        {
+          "Name": "EnableShadows",
+          "Type": "add"
+        }
+      ],
+      "From": "1.0.8",
+      "To": "1.0.9"
+    },
+    {
+      "Action": [
+        {
+          "Name": "EnableOcclusion",
+          "Type": "add"
+        }
+      ],
+      "From": "1.0.13",
+      "To": "1.0.14"
+    },
+    {
+      "Action": [
+        {
+          "Name": "EnableMarkerDetection",
+          "Type": "add"
+        }
+      ],
+      "From": "1.0.14",
+      "To": "1.0.15"
+    }
+  ],
+  "Version": "1.0.15"
+}

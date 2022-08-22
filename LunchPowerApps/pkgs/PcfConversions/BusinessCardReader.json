@@ -1,0 +1,17 @@
+{
+  "Name": "BusinessCardReader",
+  "PcfConversions": [
+    {
+      "Action": [
+        {
+          "Name": "AddressCountry",
+          "NewName": "AddressCountryRegion",
+          "Type": "rename"
+        }
+      ],
+      "From": "1.0.94",
+      "To": "1.0.95"
+    }
+  ],
+  "Version": "1.0.95"
+}
