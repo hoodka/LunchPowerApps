@@ -1,0 +1,730 @@
+"Detail As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    OnVisible: =
+
+    Canvas1 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Fill: =RGBA(250, 155, 112, 1)
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width
+        Y: =//RectQuickActionBar2.Y + RectQuickActionBar2.Height
+        ZIndex: =3
+
+        DataCard1 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =291
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Button4 As button:
+                Align: =Align.Left
+                Fill: =RGBA(246, 88, 16, 1)
+                Height: =16
+                HoverFill: =//ColorFade(RGBA(56, 96, 178, 1), -20%)
+                OnSelect: =Set(varMonday,!varMonday)
+                Size: =10
+                Text: ="Pondělí"
+                Width: =1258
+                X: =56
+                Y: =272
+                ZIndex: =1
+
+        DataCard2 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =If(varMonday=true,"150","0")
+            Width: =1366
+            WidthFit: =true
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            galMonday As gallery.galleryVertical:
+                Fill: =RGBA(116, 116, 116, 1)
+                Height: =If(varMonday=true,"150","0")
+                Items: =Sort(Filter(LunchList,ParentID=Gallery2.Selected.ID,'Den v týdnu'.Value="Pondělí"),TypePok.Id,Ascending)
+                Layout: =Layout.Vertical
+                TemplateSize: =34
+                Visible: =varMonday
+                Width: =1264
+                X: =56
+                Y: =4
+                ZIndex: =1
+
+                Label4_1 As label:
+                    Color: =RGBA(255, 255, 255, 1)
+                    Font: =Font.'Segoe UI'
+                    Height: =34
+                    OnSelect: =Select(Parent)
+                    Text: =ThisItem.Pokrm
+                    Width: =1008
+                    X: =158
+                    ZIndex: =1
+
+                Label7_1 As label:
+                    Color: =RGBA(255, 255, 255, 1)
+                    Font: =Font.'Segoe UI'
+                    Height: =34
+                    OnSelect: =Select(Parent)
+                    Text: =ThisItem.'Typ pokrmu'.Value
+                    Visible: =false
+                    X: =8
+                    ZIndex: =3
+
+                Label8_1 As label:
+                    Color: =RGBA(255, 255, 255, 1)
+                    Font: =Font.'Segoe UI'
+                    Height: =34
+                    OnSelect: =Select(Parent)
+                    Text: =ThisItem.'Číslo hlavního chodu'.Value
+                    Visible: =false
+                    Width: =40
+                    X: =118
+                    ZIndex: =4
+
+                Checkbox1 As checkbox:
+                    CheckboxSize: =30
+                    Height: =34
+                    OnSelect: =Select(Parent)
+                    Text: =""
+                    Width: =63
+                    X: =1189
+                    ZIndex: =5
+
+                Label9 As label:
+                    Color: =RGBA(255, 255, 255, 1)
+                    Height: =34
+                    OnSelect: =Select(Parent)
+                    Text: =ThisItem.TypePok.Value
+                    ZIndex: =6
+
+        DataCard3 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =26
+            Width: =1366
+            X: =0
+            Y: =2
+            ZIndex: =3
+
+            Button4_1 As button:
+                Align: =Align.Left
+                Fill: =RGBA(246, 88, 16, 1)
+                Height: =16
+                HoverFill: =//ColorFade(RGBA(56, 96, 178, 1), -20%)
+                OnSelect: =Set(varTuesday,!varTuesday)
+                Size: =10
+                Text: ="Úterý"
+                Width: =1258
+                X: =56
+                Y: =4
+                ZIndex: =1
+
+        DataCard4 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =If(varTuesday=true,"150","0")
+            Width: =1366
+            X: =0
+            Y: =3
+            ZIndex: =4
+
+            galTuesday As gallery.galleryVertical:
+                Fill: =RGBA(116, 116, 116, 1)
+                Height: =If(varTuesday=true,"150","0")
+                Items: =Filter(LunchList,ParentID=Gallery2.Selected.ID,'Den v týdnu'.Value="Úterý")
+                Layout: =Layout.Vertical
+                TemplateSize: =34
+                Visible: =varTuesday
+                Width: =1264
+                X: =56
+                ZIndex: =1
+
+                Label4_2 As label:
+                    Color: =RGBA(255, 255, 255, 1)
+                    Font: =Font.'Segoe UI'
+                    Height: =34
+                    OnSelect: =Select(Parent)
+                    Text: =ThisItem.Pokrm
+                    Width: =938
+                    X: =196
+                    ZIndex: =1
+
+                Label7_2 As label:
+                    Color: =RGBA(255, 255, 255, 1)
+                    Font: =Font.'Segoe UI'
+                    Height: =34
+                    OnSelect: =Select(Parent)
+                    Text: =ThisItem.'Typ pokrmu'.Value
+                    X: =8
+                    ZIndex: =3
+
+                Label8_2 As label:
+                    Color: =RGBA(255, 255, 255, 1)
+                    Font: =Font.'Segoe UI'
+                    Height: =34
+                    OnSelect: =Select(Parent)
+                    Text: =ThisItem.'Číslo hlavního chodu'.Value
+                    Width: =58
+                    X: =111
+                    ZIndex: =4
+
+                Checkbox1_1 As checkbox:
+                    CheckboxSize: =30
+                    Height: =34
+                    OnSelect: =Select(Parent)
+                    Text: =""
+                    Width: =63
+                    X: =1189
+                    ZIndex: =5
+
+    AddLunchHeader_2 As form:
+        DataSource: =LunchHeader
+        DefaultMode: =FormMode.View
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =202
+        Item: =Gallery2.Selected
+        Visible: |-
+            =//IsEmpty(varIDLunchHeader)
+            true
+        Width: =1264
+        X: =54
+        Y: =50
+        ZIndex: =5
+
+        Název_DataCard1_2 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Title"
+            Default: =ThisItem.Název
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@LunchHeader],DataSourceInfo.DisplayName,"Title")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@LunchHeader], DataSourceInfo.MaxLength, "Title")
+            Required: =true
+            Update: =DataCardValue1_2.Text
+            Width: =1263
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+            DataCardKey1_2 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 0, 0, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue1_2 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                HoverBorderColor: =RGBA(246, 88, 16, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey1_2.Y + DataCardKey1_2.Height + 5
+                ZIndex: =2
+
+            ErrorMessage1_2 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue1_2.Y + DataCardValue1_2.Height
+                ZIndex: =3
+
+            StarVisible1_2 As label:
+                Align: =Align.Center
+                Color: =RGBA(0, 0, 0, 1)
+                Height: =DataCardKey1_2.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey1_2.Y
+                ZIndex: =4
+
+        Začátek_DataCard1_2 As typedDataCard.dateEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="StartDate"
+            Default: =ThisItem.Začátek
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@LunchHeader],DataSourceInfo.DisplayName,"StartDate")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue2_2.SelectedDate
+            Width: =421
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            DataCardKey2_2 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 0, 0, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue2_2 As datepicker:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultDate: |-
+                    =//Parent.Default
+                    varSetDateStart
+                DisplayMode: =Parent.DisplayMode
+                EndYear: =Year(Today())+100
+                Font: =Font.'Segoe UI'
+                IconBackground: |
+                    =RGBA(56, 96, 178, 1)
+                IconFill: |
+                    =RGBA(255, 255, 255, 1)
+                IsEditable: =true
+                PaddingBottom: =0
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                StartYear: =1899
+                Tooltip: =Parent.DisplayName
+                Width: =337
+                X: =30
+                Y: =49
+                ZIndex: =2
+
+            ErrorMessage2_2 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue2_2.Y + DataCardValue2_2.Height
+                ZIndex: =3
+
+            StarVisible2_2 As label:
+                Align: =Align.Center
+                Height: =DataCardKey2_2.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey2_2.Y
+                ZIndex: =4
+
+        Konec_DataCard1_2 As typedDataCard.dateEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="EndDate"
+            Default: =ThisItem.Konec
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@LunchHeader],DataSourceInfo.DisplayName,"EndDate")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue3_2.SelectedDate
+            Width: =421
+            X: =1
+            Y: =1
+            ZIndex: =2
+
+            DataCardKey3_2 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 0, 0, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue3_2 As datepicker:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                DefaultDate: =varSetDateEnd
+                DisplayMode: =Parent.DisplayMode
+                EndYear: =Year(Today())+100
+                IsEditable: =true
+                PaddingBottom: =0
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                StartYear: =1899
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey3_2.Y + DataCardKey3_2.Height + 5
+                ZIndex: =2
+
+            ErrorMessage3_2 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue3_2.Y + DataCardValue3_2.Height
+                ZIndex: =3
+
+            StarVisible3_2 As label:
+                Align: =Align.Center
+                Height: =DataCardKey3_2.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey3_2.Y
+                ZIndex: =4
+
+    Icon2_5 As icon.Add:
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(246, 88, 16, 1)
+        Height: =43
+        Icon: =Icon.CalendarBlank
+        OnSelect: =Set(varCalStart,true)
+        PaddingLeft: =5
+        PaddingRight: =5
+        Visible: =false
+        Width: =35
+        X: =388
+        Y: =184
+        ZIndex: =10
+
+    grpCalStart_2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =11
+
+        Rectangle3_4 As rectangle:
+            Fill: =RGBA(237, 237, 237, 1)
+            Height: =394
+            Visible: =varCalStart
+            Width: =443
+            X: =84
+            Y: =238
+            ZIndex: =6
+
+        LblMonthSelected1_5 As label:
+            Align: =Align.Center
+            Height: =35
+            Size: =18
+            Text: =Text(_firstDayOfMonth, "mmmm yyyy")
+            Visible: =varCalStart
+            Width: =418
+            Wrap: =false
+            X: =97
+            Y: =245
+            ZIndex: =7
+
+        WeekdayGallery1_5 As gallery.WeekdayGallery:
+            AccessibleLabel: ="Days of the week"
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =32
+            Items: =Calendar.WeekdaysShort()
+            ShowScrollbar: =false
+            TemplatePadding: =0
+            TemplateSize: =60
+            Visible: =varCalStart
+            Width: =419
+            X: =97
+            Y: =288
+            ZIndex: =8
+
+            Title4_5 As label:
+                Align: =Align.Center
+                Color: =RGBA(246, 88, 16, 1)
+                Height: =WeekdayGallery1_5.TemplateHeight
+                OnSelect: =Select(Parent)
+                Size: =17 * WeekdayGallery1_5.TemplateWidth / 77
+                Text: =ThisItem.Value
+                VerticalAlign: =Middle
+                Width: =WeekdayGallery1_5.TemplateWidth
+                Wrap: =false
+                X: =WeekdayGallery1_5.TemplateWidth / 2 - Self.Width / 2
+                Y: =WeekdayGallery1_5.TemplateHeight / 2 - Self.Height / 2
+                ZIndex: =1
+
+        MonthDayGallery1_5 As gallery.MonthDayGallery:
+            AccessibleLabel: ="Days of selected month"
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =302
+            Items: =[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19, 20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]
+            Layout: =Layout.Vertical
+            ShowScrollbar: =false
+            TemplatePadding: =0
+            TemplateSize: =60
+            Visible: =varCalStart
+            Width: =419
+            WrapCount: =7
+            X: =97
+            Y: =319
+            ZIndex: =9
+
+            Circle1_5 As circle:
+                Height: =Self.Width
+                OnSelect: =Select(Parent)
+                Visible: |-
+                    =/*Visible if calendar events are found on this day*/               
+                    CountRows(Filter(MyCalendarEvents, DateValue(Text(Start)) = DateAdd(_firstDayInView,ThisItem.Value,Days))) > 0 && !Subcircle1_5.Visible && Title5_5.Visible
+                Width: =6.5
+                X: =MonthDayGallery1_5.TemplateWidth / 2 - Self.Width / 2
+                Y: =MonthDayGallery1_5.TemplateHeight * (0.75)
+                ZIndex: =1
+
+            Subcircle1_5 As circle:
+                Fill: =RGBA(246, 88, 16, 1)
+                Height: =3 * Title5_5.Size
+                OnSelect: =Select(Parent)
+                Visible: =And(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, Title5_5.Visible)
+                Width: =Self.Height
+                X: =MonthDayGallery1_5.TemplateWidth/2 - Self.Width/2
+                Y: =MonthDayGallery1_5.TemplateHeight / 2 - Self.Height / 2
+                ZIndex: =2
+
+            Title5_5 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Color: =If(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, RGBA(255, 255, 255, 1), DateAdd(_firstDayInView, ThisItem.Value) = Today(), RGBA(47, 41, 43, 1), LblMonthSelected1_5.Color)
+                Fill: |-
+                    =/*Fill value changes if the gallery item day = today, or if it lies outside of the current month*/             
+                    If(
+                        /*Date selected is today*/
+                        DateAdd(_firstDayInView, ThisItem.Value) = Today() && DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, RGBA(0,0,0,0),
+                        /*Today when it is not selected*/
+                        DateAdd(_firstDayInView, ThisItem.Value) = Today(), ColorFade(Subcircle1_5.Fill, 0.67), 
+                        /*The day is outside the range of the currently selected month*/
+                        Abs(Self.Text - ThisItem.Value) > 10,RGBA(200, 200, 200, 0.3), RGBA(0, 0, 0, 0))
+                FocusedBorderColor: =Self.Color
+                FocusedBorderThickness: =2
+                Height: =MonthDayGallery1_5.TemplateHeight
+                OnSelect: |-
+                    =//Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, Days))
+                    Set(varSetDateStart,DateAdd(_firstDayInView, ThisItem.Value, Days));Set(varCalStart,false)
+                Size: =17 * MonthDayGallery1_5.TemplateWidth / 91
+                TabIndex: =0
+                Text: =Day(DateAdd(_firstDayInView,ThisItem.Value,Days))
+                VerticalAlign: =Middle
+                Visible: |-
+                    =/*This item is in a row containing no days of the visible month. It is in the row after the row where the last day of the month occurs*/ 
+                     !(DateAdd(_firstDayInView,ThisItem.Value,Days) - Weekday(DateAdd(_firstDayInView,ThisItem.Value,Days)) + 1 > _lastDayOfMonth)
+                Width: =MonthDayGallery1_5.TemplateWidth
+                Wrap: =false
+                ZIndex: =3
+
+    grpCalEnd_2 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =16
+
+        Rectangle3_5 As rectangle:
+            Fill: =RGBA(237, 237, 237, 1)
+            Height: =394
+            Visible: =varCalEnd2
+            Width: =443
+            X: =504
+            Y: =238
+            ZIndex: =12
+
+        LblMonthSelected1_6 As label:
+            Align: =Align.Center
+            Height: =35
+            Size: =18
+            Text: =Text(_firstDayOfMonth, "mmmm yyyy")
+            Visible: =varCalEnd2
+            Width: =418
+            Wrap: =false
+            X: =517
+            Y: =245
+            ZIndex: =13
+
+        WeekdayGallery1_6 As gallery.WeekdayGallery:
+            AccessibleLabel: ="Days of the week"
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =32
+            Items: =Calendar.WeekdaysShort()
+            ShowScrollbar: =false
+            TemplatePadding: =0
+            TemplateSize: =60
+            Visible: =varCalEnd2
+            Width: =419
+            X: =517
+            Y: =288
+            ZIndex: =14
+
+            Title4_6 As label:
+                Align: =Align.Center
+                Color: =RGBA(246, 88, 16, 1)
+                Height: =WeekdayGallery1_6.TemplateHeight
+                OnSelect: =Select(Parent)
+                Size: =17 * WeekdayGallery1_6.TemplateWidth / 77
+                Text: =ThisItem.Value
+                VerticalAlign: =Middle
+                Width: =WeekdayGallery1_6.TemplateWidth
+                Wrap: =false
+                X: =WeekdayGallery1_6.TemplateWidth / 2 - Self.Width / 2
+                Y: =WeekdayGallery1_6.TemplateHeight / 2 - Self.Height / 2
+                ZIndex: =1
+
+        MonthDayGallery1_6 As gallery.MonthDayGallery:
+            AccessibleLabel: ="Days of selected month"
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =302
+            Items: =[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19, 20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41]
+            Layout: =Layout.Vertical
+            ShowScrollbar: =false
+            TemplatePadding: =0
+            TemplateSize: =60
+            Visible: =varCalEnd2
+            Width: =419
+            WrapCount: =7
+            X: =517
+            Y: =319
+            ZIndex: =15
+
+            Circle1_6 As circle:
+                Height: =Self.Width
+                OnSelect: =Select(Parent)
+                Visible: |-
+                    =/*Visible if calendar events are found on this day*/               
+                    CountRows(Filter(MyCalendarEvents, DateValue(Text(Start)) = DateAdd(_firstDayInView,ThisItem.Value,Days))) > 0 && !Subcircle1_6.Visible && Title5_6.Visible
+                Width: =6.5
+                X: =MonthDayGallery1_6.TemplateWidth / 2 - Self.Width / 2
+                Y: =MonthDayGallery1_6.TemplateHeight * (0.75)
+                ZIndex: =1
+
+            Subcircle1_6 As circle:
+                Fill: =RGBA(246, 88, 16, 1)
+                Height: =3 * Title5_6.Size
+                OnSelect: =Select(Parent)
+                Visible: =And(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, Title5_6.Visible)
+                Width: =Self.Height
+                X: =MonthDayGallery1_6.TemplateWidth/2 - Self.Width/2
+                Y: =MonthDayGallery1_6.TemplateHeight / 2 - Self.Height / 2
+                ZIndex: =2
+
+            Title5_6 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Color: =If(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, RGBA(255, 255, 255, 1), DateAdd(_firstDayInView, ThisItem.Value) = Today(), RGBA(47, 41, 43, 1), LblMonthSelected1_6.Color)
+                Fill: |-
+                    =/*Fill value changes if the gallery item day = today, or if it lies outside of the current month*/             
+                    If(
+                        /*Date selected is today*/
+                        DateAdd(_firstDayInView, ThisItem.Value) = Today() && DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, RGBA(0,0,0,0),
+                        /*Today when it is not selected*/
+                        DateAdd(_firstDayInView, ThisItem.Value) = Today(), ColorFade(Subcircle1_6.Fill, 0.67), 
+                        /*The day is outside the range of the currently selected month*/
+                        Abs(Self.Text - ThisItem.Value) > 10,RGBA(200, 200, 200, 0.3), RGBA(0, 0, 0, 0))
+                FocusedBorderColor: =Self.Color
+                FocusedBorderThickness: =2
+                Height: =MonthDayGallery1_6.TemplateHeight
+                OnSelect: |-
+                    =//Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, Days))
+                    Set(varSetDateEnd,DateAdd(_firstDayInView, ThisItem.Value, Days));Set(varCalEnd2,false)
+                Size: =17 * MonthDayGallery1_6.TemplateWidth / 91
+                TabIndex: =0
+                Text: =Day(DateAdd(_firstDayInView,ThisItem.Value,Days))
+                VerticalAlign: =Middle
+                Visible: |-
+                    =/*This item is in a row containing no days of the visible month. It is in the row after the row where the last day of the month occurs*/ 
+                     !(DateAdd(_firstDayInView,ThisItem.Value,Days) - Weekday(DateAdd(_firstDayInView,ThisItem.Value,Days)) + 1 > _lastDayOfMonth)
+                Width: =MonthDayGallery1_6.TemplateWidth
+                Wrap: =false
+                ZIndex: =3
+
+    Button3_6 As button:
+        Fill: =RGBA(246, 88, 16, 1)
+        HoverFill: |-
+            =//ColorFade(RGBA(56, 96, 178, 1), -20%)
+            Orange
+        OnSelect: =//SubmitForm(AddLunch_1);ResetForm(AddLunch_1)
+        Text: ="Přidat"
+        Visible: =//!IsBlank(varIDLunchHeader)
+        X: =1117
+        Y: =547
+        ZIndex: =17
+
+    Button3_7 As button:
+        Fill: =RGBA(246, 88, 16, 1)
+        HoverFill: |-
+            =//ColorFade(RGBA(56, 96, 178, 1), -20%)
+            Orange
+        OnSelect: |-
+            =Navigate(Screen1);
+            Set(varIDLunchHeader, Blank())
+        Text: ="Uložit a ukončit"
+        Width: =200
+        X: =1077
+        Y: =683
+        ZIndex: =18
+
+    Icon2_4 As icon.Add:
+        Color: =RGBA(255, 255, 255, 1)
+        Fill: =RGBA(246, 88, 16, 1)
+        Height: =43
+        Icon: =Icon.CalendarBlank
+        OnSelect: =Set(varCalEnd2,true)
+        PaddingLeft: =5
+        PaddingRight: =5
+        Visible: =false
+        Width: =35
+        X: =784
+        Y: =184
+        ZIndex: =19
+
+    "ClipboardControl3 As 'Clipboard Control'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =35
+        textField: ="Text ke kopírování"
+        Width: =376
+        X: =741
+        Y: =98
+        ZIndex: =20
+

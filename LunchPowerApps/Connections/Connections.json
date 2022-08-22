@@ -1,0 +1,54 @@
+{
+  "aa75d4ca-ed47-417c-be27-1d216de531e0": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1591/1.0.1591.2961/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Outlook"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "aa75d4ca-ed47-417c-be27-1d216de531e0"
+  },
+  "ea41ee31-e54c-414c-a275-6d713e903289": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1591/1.0.1591.2961/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://pinya.sharepoint.com/sites/TestSiteCollection2": {
+        "dataSources": {
+          "LunchHeader": {
+            "tableName": "ed1886f7-ee87-4b0e-b800-d65af38278b9"
+          },
+          "LunchList": {
+            "tableName": "2cbe6594-287b-4b08-9ed5-c93e1727d552"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "LunchHeader",
+      "LunchList"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "ea41ee31-e54c-414c-a275-6d713e903289"
+  }
+}

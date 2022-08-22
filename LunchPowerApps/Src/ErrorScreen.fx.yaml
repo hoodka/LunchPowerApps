@@ -1,0 +1,10 @@
+ErrorScreen As screen:
+
+    Label1 As label:
+        Height: =174
+        Text: =locErrorMessages
+        Width: =680
+        X: =375
+        Y: =339
+        ZIndex: =1
+
